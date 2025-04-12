@@ -1,0 +1,22 @@
+* Test Web App on Gambit Scheme
+
+Every year I feel compelled to try building a web application with something exotic, such as Scheme!
+Usually, this doesn't lead anywhere, but this time I actually made some progress. Ultimately, however, I ran out of time that I could spend on something so seemingly pointless. 🔥
+
+That said, I think there is still hope, so I decided to put this in a repository for... well, for future me, I guess.
+
+So, here is the current progress:
++ It actually works! 🙌
++ It avoids the typical Lisp/Scheme webapp rite of passage involving yet another custom SXML->DOM diffing implementation, instead using the [[https://github.com/AFASSoftware/maquette][Maquette]] runtime (a JS library).
++ And that's about it - it renders a couple of elements just to demonstrate that the Gambit JS target/FFI works and can handle two-way communication (i.e., event handlers function correctly).
++ There are no libs for anything webapp related because Gambit supports R7RS libs only and even so, it seems can't work with [[https://akkuscm.org/][Akku]].
++ Oh, almost forgot: it's a mere 8MB in size! 🎀 There is a gist mentioned in the Sources section below showing how a minimal runtime library can be created, but that approach didn't work for me, and I don't have any more time for this at the moment.
++ Gambit's documentation is a nightmare. I hope [[https://github.com/mighty-gerbils/gerbil][Gerbil Scheme]] adds a JS target one day.
+
+* Sources
+ + [[https://gist.github.com/bentxt/ff4a4ef8e3ee13223613091a052aa641][The magic gist for a minimal runtime library.]]
+ + [[https://github.com/udem-dlteam/webapp-tutorial/blob/master/webapp-tutorial.scm][Webapp code, apparently for a presentation]]
+ + [[https://gist.github.com/roman01la/1d2f84357a2aef8ef053dd6ba4f0aad1][Someone's attempt at Gambit JS FFI]]
+ + [[https://www.iro.umontreal.ca/~feeley/papers/BelangerFeeleyELS21.pdf][JS FFI description from the Gambit authors themselves]] (BTW, TODO: Still need to read this 😁)
+ + [[https://github.com/jlongster/farmageddon/tree/master][A game written in Gambit Scheme]]
+

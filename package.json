@@ -1,0 +1,15 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kira Verhovyh <git@kyrella.xyz>",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.25.2",
+    "maquette": "^4.1.2"
+  },
+  "scripts": {
+    "start:dev": "NODE_ENV=development mkdir -p build && make && cp index.html ./build && node build.mjs",
+    "clean": "rm -rf ./build"
+  }
+}
